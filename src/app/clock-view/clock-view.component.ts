@@ -1,9 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, InjectionToken, Inject } from '@angular/core';
 
-import { Clock } from "../clock";
-
-import { ClocksFlowViewComponent } from "../clocks-flow-view/clocks-flow-view.component";
-import { ClocksDataGridComponent } from '../clocks-data-grid/clocks-data-grid.component';
+import { Clock, IClockContainerView, ClockContainerView } from "../clock";
 
 @Component({
   selector: 'app-clock-view',
@@ -14,8 +11,10 @@ export class ClockViewComponent implements OnInit {
 
   @Input() clock: Clock;
 
+  static CONTAINER_TOKEN = new InjectionToken<IClockContainerView>(typeof(ClockContainerView));
+
   constructor(
-    private parentCollectionView: ClocksFlowViewComponent
+    @Inject(ClockViewComponent.CONTAINER_TOKEN) private parentCollectionView: ClockContainerView
   ) { }
 
   ngOnInit() {
