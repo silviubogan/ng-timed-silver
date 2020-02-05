@@ -6,14 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  clocks = [
-    {
-      tag: "Clock A"
-    },
-    {
-      tag: "Clock B"
-    }
-  ];
+
 }
 
 

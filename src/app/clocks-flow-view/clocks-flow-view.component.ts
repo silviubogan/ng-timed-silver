@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClocksFlowViewComponent implements OnInit {
 
+  clocks = [
+    {
+      tag: "Clock A"
+    },
+    {
+      tag: "Clock B"
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
