@@ -4,11 +4,11 @@ import { Clock } from '../clock';
 import { ClockService } from "../clock.service";
 
 @Component({
-  selector: 'app-clocks-flow-view',
-  templateUrl: './clocks-flow-view.component.html',
-  styleUrls: ['./clocks-flow-view.component.scss']
+  selector: 'app-clocks-data-grid',
+  templateUrl: './clocks-data-grid.component.html',
+  styleUrls: ['./clocks-data-grid.component.scss']
 })
-export class ClocksFlowViewComponent implements OnInit {
+export class ClocksDataGridComponent implements OnInit {
 
   static selectedClock : Clock | null;
   clocks : Clock[];
@@ -27,4 +27,5 @@ export class ClocksFlowViewComponent implements OnInit {
     this.clockService.getClocks()
       .subscribe(clocks => this.clocks = clocks);
   }
+
 }

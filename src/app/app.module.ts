@@ -10,6 +10,8 @@ import { CartService } from './cart.service';
 import { ClockViewComponent } from './clock-view/clock-view.component';
 import { ClocksFlowViewComponent } from './clocks-flow-view/clocks-flow-view.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ClocksDataGridComponent } from './clocks-data-grid/clocks-data-grid.component';
 
 @NgModule({
   imports: [
@@ -17,16 +19,15 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ClocksFlowViewComponent }
-    ])
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ClockViewComponent,
     ClocksFlowViewComponent,
-    StatusBarComponent
+    StatusBarComponent,
+    ClocksDataGridComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [ CartService ]
