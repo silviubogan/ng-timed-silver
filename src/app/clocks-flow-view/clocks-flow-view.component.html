@@ -1,4 +1,4 @@
 <div *ngFor="let clock of clocks">
-    <h2>{{clock.tag}}</h2>
-    <input [(ngModel)]="clock.tag" placeholder="clock tag here">
+    <h2>{{clock.id}}. {{clock.tag}}</h2>
+    <textarea [(ngModel)]="clock.tag" placeholder="clock tag here" class="clock-tag-textarea"></textarea>
 </div>
