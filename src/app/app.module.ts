@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { CartService } from './cart.service';
 import { ClockViewComponent } from './clock-view/clock-view.component';
 import { ClocksFlowViewComponent } from './clocks-flow-view/clocks-flow-view.component';
+import { StatusBarComponent } from './status-bar/status-bar.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { ClocksFlowViewComponent } from './clocks-flow-view/clocks-flow-view.com
     AppComponent,
     TopBarComponent,
     ClockViewComponent,
-    ClocksFlowViewComponent
+    ClocksFlowViewComponent,
+    StatusBarComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [ CartService ]
