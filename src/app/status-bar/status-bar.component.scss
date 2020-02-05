@@ -1,10 +1,26 @@
-.status-bar-message
+.status-bar
 {
-    color: gray;
     padding: 1rem;
-}
+    background: black;
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    &.status-bar-message
+    {
+        color: gray;
+        grid-column: 0;
+        align-self: stretch;
+    }
 
-.clear-btn-wrapper
-{
-    text-align: right;
+    &.status-bar-clear-button
+    {
+        display: block;
+        grid-column: 1;
+        align-self: end;
+    }
 }
