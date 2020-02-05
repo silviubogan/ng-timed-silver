@@ -25,6 +25,7 @@ export class ClocksFlowViewComponent implements OnInit {
 
   getClocks(): void
   {
-    this.clocks = this.clockService.getClocks();
+    this.clockService.getClocks()
+      .subscribe(clocks => this.clocks = clocks);
   }
 }

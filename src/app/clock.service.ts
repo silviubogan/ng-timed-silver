@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { Clock } from "./clock";
+import { Observable, of } from 'rxjs';
 
+import { Clock } from "./clock";
 import { CLOCKS } from "./mock-clocks";
 
 @Injectable({
@@ -11,8 +12,8 @@ export class ClockService {
 
   constructor() { }
 
-  getClocks(): Clock[]
+  getClocks(): Observable<Clock[]>
   {
-    return CLOCKS;
+    return of(CLOCKS);
   }
 }
