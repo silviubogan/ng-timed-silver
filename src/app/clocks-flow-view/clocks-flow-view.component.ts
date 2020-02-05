@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Clock } from '../clock';
 
-import { CLOCKS } from '../mock-clocks';
+import { ClockService } from "../clock.service";
 
 @Component({
   selector: 'app-clocks-flow-view',
@@ -12,12 +12,19 @@ import { CLOCKS } from '../mock-clocks';
 export class ClocksFlowViewComponent implements OnInit {
 
   static selectedClock : Clock | null;
-  clocks : Clock[] = [];
+  clocks : Clock[];
 
-  constructor() {
-    this.clocks.push(...CLOCKS);
+  constructor(
+    private clockService: ClockService
+  ) {
   }
 
   ngOnInit() {
+    this.getClocks();
+  }
+
+  getClocks(): void
+  {
+    this.clocks = this.clockService.getClocks();
   }
 }

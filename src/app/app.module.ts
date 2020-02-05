@@ -17,7 +17,7 @@ import { ClocksFlowViewComponent } from './clocks-flow-view/clocks-flow-view.com
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent }
+      { path: '', component: ClocksFlowViewComponent }
     ])
   ],
   declarations: [
