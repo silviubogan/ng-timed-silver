@@ -18,6 +18,7 @@ export class ClockViewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
   }
 
   onClicked(c : Clock)
@@ -26,6 +27,7 @@ export class ClockViewComponent implements OnInit {
     {
       c2.selected = false;
     }
+
     c.selected = true;
   }
 }
