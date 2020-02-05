@@ -20,13 +20,4 @@ export class ClocksFlowViewComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onClicked(c : Clock)
-  {
-    for (let c2 of this.clocks)
-    {
-      c2.selected = false;
-    }
-    c.selected = true;
-  }
 }
