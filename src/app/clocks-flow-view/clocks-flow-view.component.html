@@ -1,3 +1,4 @@
 <div *ngFor="let clock of clocks">
     <h2>{{clock.tag}}</h2>
+    <input [(ngModel)]="clock.tag" placeholder="clock tag here">
 </div>
