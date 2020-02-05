@@ -12,6 +12,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { ClockViewComponent } from './clock-view/clock-view.component';
+import { ClocksFlowViewComponent } from './clocks-flow-view/clocks-flow-view.component';
 
 @NgModule({
   imports: [
@@ -32,7 +34,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    ClockViewComponent,
+    ClocksFlowViewComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]
