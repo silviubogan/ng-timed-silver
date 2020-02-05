@@ -1,1 +1,6 @@
-<p class="status-bar-message">{{currentStatus}}</p>
+<div *ngIf="appStatusService.messages.length">
+    <p class="status-bar-message">{{appStatusService.lastMessage}}</p>
+    <p class="clear-btn-wrapper">
+        <button class="clear" (click)="appStatusService.clear()">Clear</button>
+    </p>
+</div>
