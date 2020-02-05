@@ -2,3 +2,13 @@
 {
     font-weight: bold;
 }
+
+.clock-view
+{
+    padding: 1rem;
+
+    &.selected
+    {
+        background-color: lightyellow;
+    }
+}
