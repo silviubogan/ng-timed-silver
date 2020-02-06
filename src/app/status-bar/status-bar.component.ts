@@ -18,9 +18,9 @@ export class StatusBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  showJson() : void
+  async showJson()
   {
-    alert(this.appStorageService.getFullJson());
+    alert(await this.appStorageService.getFullJson());
   }
 
 }
