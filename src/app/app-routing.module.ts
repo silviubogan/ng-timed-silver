@@ -5,7 +5,8 @@ import { ClocksDataGridComponent } from './clocks-data-grid/clocks-data-grid.com
 
 
 const routes: Routes = [
-  { path: '', component: ClocksFlowViewComponent },
+  { path: '', redirectTo: '/flow-view', pathMatch: 'full' },
+  { path: 'flow-view', component: ClocksFlowViewComponent },
   { path: 'data-grid', component: ClocksDataGridComponent }
 ];
 

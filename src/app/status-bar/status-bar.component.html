@@ -1,4 +1,10 @@
-<div *ngIf="appStatusService.messages.length" class="status-bar">
-    <p class="status-bar-message">{{appStatusService.lastMessage}}</p>
-    <button class="status-bar-clear-button" (click)="appStatusService.clear()">Clear</button>
+<div class="status-bar">
+    <div class="status-bar-left-side">
+        <p class="status-bar-message" *ngIf="appStatusService.messages.length">
+            {{appStatusService.lastMessage}}
+        </p>
+    </div>
+    <button class="status-bar-clear-button" (click)="appStatusService.clear()"
+        *ngIf="appStatusService.messages.length">Clear</button>
+    <button class="status-bar-json-button" (click)="showJson()">JSON</button>
 </div>

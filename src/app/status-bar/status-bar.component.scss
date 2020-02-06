@@ -1,26 +1,41 @@
+@mixin status-bar-button {
+    display: block;
+    align-self: end;
+}
+
 .status-bar
 {
     padding: 1rem;
     background: black;
     display: grid;
-    grid-template-columns: auto min-content;
-    grid-template-rows: auto;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+
+    grid-template-columns: auto min-content min-content;
+    grid-template-rows: auto;
     
-    &.status-bar-message
+    &.status-bar-left-side
     {
-        color: gray;
-        grid-column: 0;
-        align-self: stretch;
+        
+        &.status-bar-message
+        {
+            color: gray;
+            grid-column: 0;
+            align-self: stretch;
+        }
     }
 
     &.status-bar-clear-button
     {
-        display: block;
+        @include status-bar-button;
         grid-column: 1;
-        align-self: end;
+    }
+
+    &.status-bar-json-button
+    {
+        @include status-bar-button;
+        grid-column: 2;
     }
 }

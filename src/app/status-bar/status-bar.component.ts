@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AppStatusService } from '../app-status.service';
+import { AppStorageService } from '../app-storage.service';
 
 @Component({
   selector: 'app-status-bar',
@@ -10,10 +11,16 @@ import { AppStatusService } from '../app-status.service';
 export class StatusBarComponent implements OnInit {
   
   constructor(
-    public appStatusService: AppStatusService
+    public appStatusService: AppStatusService,
+    private appStorageService: AppStorageService
   ) { }
 
   ngOnInit() {
+  }
+
+  showJson() : void
+  {
+    alert(this.appStorageService.getFullJson());
   }
 
 }
